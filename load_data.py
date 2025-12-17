@@ -53,16 +53,28 @@ def get_positions() -> list[dict[str, str]]:
 
     return trams_json, 200
 
-def get_vehicle_dictionary() -> pd.DataFrame:
+def get_vehicle_dictionary(json = False):
+    '''Download technical information about trams'''
 
     vehicle_data = requests.get("https://www.ztm.poznan.pl/pl/dla-deweloperow/getGtfsRtFile?file=vehicle_dictionary.csv")
 
     if vehicle_data.status_code != 200:
         return None, vehicle_data.status_code
-    
-    return pd.read_csv(StringIO(vehicle_data.text), index_col=0), 200
 
-def get_vehicle_data() -> pd.DataFrame:
+    if json:
+        df = pd.read_csv(StringIO(vehicle_data.text))
+        df.rename(columns={"vehicle" : "id"}, inplace=True)
+        df["id"] = df["id"].astype(int)
+        return df.to_dict('records'), 200
+
+    df = pd.read_csv(StringIO(vehicle_data.text), index_col=0)
+    df.index = df.index.astype(int)
+    df.index.rename("id", inplace=True)
+
+    return df, 200
+
+def get_vehicle_data(json = False) -> pd.DataFrame:
+    '''Download and concatenate all data about trams'''
 
     vehicle_models = pd.read_csv("vehicle_models.csv", index_col=0)
 
@@ -71,4 +83,17 @@ def get_vehicle_data() -> pd.DataFrame:
     if vehicle_dictionary[1] != 200:
         return vehicle_dictionary
 
-    return vehicle_models.join(vehicle_dictionary[0]), 200
+    vehicle_position = get_positions()
+
+    if vehicle_position[1] != 200:
+        return None, vehicle_position
+
+    vehicle_position = pd.DataFrame(vehicle_position[0])
+    vehicle_position.index = vehicle_position["id"].astype(int)
+
+    if json:
+        return vehicle_position.join(vehicle_models.join(vehicle_dictionary[0])).to_dict("records"), 200
+    
+    vehicle_position.drop(columns="id", inplace=True)
+
+    return vehicle_position.join(vehicle_models.join(vehicle_dictionary[0])), 200
