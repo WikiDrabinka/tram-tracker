@@ -1,11 +1,11 @@
-vehicle,type,notes
+id,type,notes
 83,,
 84,,
 87,Moderus Alfa HF07,
 88,Moderus Alfa HF07,
 97,,
 98,,
-111,,
+111,,specjalny dwukierunkowy
 112,,
 115,,
 116,,
@@ -89,8 +89,8 @@ vehicle,type,notes
 315,Konstal 105Na,
 324,,
 325,,
-336,Moderus Alfa HF07,
-337,Moderus Alfa HF07,
+336,Moderus Alfa HF07,rdza
+337,Moderus Alfa HF07,rdza
 399,Tatra RT6,
 400,Tatra RT6,
 401,Tatra RT6,
@@ -119,7 +119,7 @@ vehicle,type,notes
 424,Moderus Beta MF02AC,
 425,Moderus Beta MF02AC,
 426,Moderus Beta MF20AC,Nintendo ad
-427,,
+427,Moderus Beta MF02AC,archicom ad
 428,Moderus Beta MF02AC,Lego ad
 429,Moderus Beta MF02AC,
 430,Moderus Beta MF02AC,Dynks ad
@@ -134,24 +134,24 @@ vehicle,type,notes
 442,,
 443,,
 444,,
-445,,
+445,Moderus Beta MF20AC,Pizzatopia ad
 446,Moderus Beta MF20AC,
-447,,
-448,,
+447,Moderus Beta MF20AC,Aluplast/Mirox ad
+448,Moderus Beta MF20AC,czysta
 449,Moderus Beta MF20AC,Powstanie Wielkopolskie
 450,,
 451,Moderus Beta MF20AC,smth ad
 452,Moderus Beta MF20AC,aluplast ad
 453,,
 454,Moderus Beta MF20AC,Develia ad
-455,Moderus Beta MF20AC,
+455,Moderus Beta MF20AC,WSB Merito ad
 456,Moderus Beta MF20AC,
 457,,
 458,,
-459,,
+459,Moderus Beta MF20AC,nie wiem bo za szybkie było ale coś miejskiego chyba
 460,Moderus Beta MF20AC,
 500,Moderus Gamma LF01AC,
-501,Siemens Combino,
+501,Siemens Combino,"stare jasne kolory, specjalna tapicerka"
 502,Siemens Combino,
 503,Siemens Combino,
 504,Siemens Combino,
@@ -168,11 +168,11 @@ vehicle,type,notes
 515,Solaris Tramino,
 516,Solaris Tramino,
 517,Solaris Tramino,
-518,Solaris Tramino,
+518,Solaris Tramino,jamnik
 519,Solaris Tramino,
 520,Solaris Tramino,
 521,Solaris Tramino,
-522,Solaris Tramino,
+522,Solaris Tramino,jamnik
 523,Solaris Tramino,
 524,Solaris Tramino,
 525,Solaris Tramino,
@@ -231,7 +231,7 @@ vehicle,type,notes
 618,Moderus Gamma LF02AC,
 619,Moderus Gamma LF02AC,
 620,Moderus Gamma LF02AC,
-621,Moderus Gamma LF02AC,
+621,Moderus Gamma LF02AC,specjalna tapicerka
 622,Moderus Gamma LF02AC,
 623,Moderus Gamma LF02AC,
 624,Moderus Gamma LF02AC,
@@ -241,8 +241,8 @@ vehicle,type,notes
 628,Moderus Gamma LF02AC,
 629,Moderus Gamma LF02AC,
 630,Moderus Gamma LF02AC,
-903,,
-904,,
+903,,zielony
+904,,pomarańczowy 
 907,Düwag GT8,pomarańczowy 
 911,Moderus Beta MF22AC BD,
 912,,
